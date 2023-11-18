@@ -6,41 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghoul [BETA]</title>
-    
+    <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="./main.js"></script>
 </head>
 
 <body>
-    <h1>STILL BETA DON'T JUDGE</h1>
+    <h1>Encryption (beta)</h1>
     <form id="encryptionForm">
         <label for="encrypt">Insert what you want to encrypt</label>
         <br>
         <input type="text" id="encrypt" name="encrypt" required>
         <br>
-        <label for="shift">Insert any number, <strong>REMEMBER ME</strong></label>
+        <label for="shift">Insert any number between 1-20, <strong>REMEMBER ME</strong></label>
         <br>
-        <input type="number" id="shift" name="shift" required>
+        <input type="number" id="shift" name="shift"  min="1" max="20" required>
         <br>
+        <button type="submit" form="encryptionForm" onclick="printEncryption()">ENCRYPT</button>
+        <br><br>
+        <p id="result" name="result"></p>
     </form>
-    <br>
-    <button type="submit" form="encryptionForm" onclick="printEncryption()">encrypt now</button>
-    <br><br>
-    Result:
-    <p id="result" name="result"></p>
+
     <form id="decryptionForm">
         <label for="encrypt">Insert what you want to decrypt</label>
         <br>
-        <input type="text" id="decrypt" name="decrypt" required>
+        <input type="text" id="decrypt" name="decrypt"required>
+
         <br>
         <label for="reverseNumber">Insert the number </label>
         <br>
-        <input type="number" id="reverseNumber" name="reverseNumber" required>
+        <input type="number" id="reverseNumber" name="reverseNumber" min="1" max="20" required>
         <br>
+        <button type="submit" form="decryptionForm" onclick="printDecryption()">DECRYPT</button>
+        <br><br>
+        <p id="decryptResult" name="decryptResult"></p>
     </form>
-    <button type="submit" form="decryptionForm" onclick="printDecryption()">encrypt now</button>
+
     <br><br>
-    Result:
-    <p id="decryptResult" name="decryptResult"></p>
+
 </body>
 
 </html>
