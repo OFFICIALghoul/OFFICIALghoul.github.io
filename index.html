@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <script src="./main.js"></script>
 </head>
+
 <body>
-    <form></form>
+    <form id="encryptionForm">
+        <label for="encrypt">Insert what you want to encrypt</label>
+        <br>
+        <input type="text" id="encrypt" name="encrypt" required>
+        <br>
+        <label for="shift">Insert any number between 1-10, <strong>REMEMBER ME</strong></label>
+        <br>
+        <input type="number" id="shift" name="shift" min="1" max="10" required>
+        <br>
+    </form>
+    Result:
+    <p id="result" name="result"></p>
+    <button type="submit" form="encryptionForm" onclick="printToHTML()">Submit Form 1</button>
 </body>
+
 </html>

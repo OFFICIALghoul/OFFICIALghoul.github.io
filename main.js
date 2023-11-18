@@ -35,6 +35,22 @@
       return decryptString;
     }
 
-    function printToHTML(){
-        
+    function printToHTML() {
+        event.preventDefault();
+        const encryptionValue = document.getElementById('encrypt').value;
+        const number = document.getElementById('shift').value;
+        const resultElement = document.getElementById('result');
+    
+        // Check if both input fields have values
+        if (encryptionValue && number) {
+            // Convert the 'number' value to a number (it's retrieved as a string from the input)
+            const shiftNumber = parseInt(number, 10);
+            
+            // Call the encrypt function and update the result in the HTML
+            resultElement.innerHTML = encrypt(encryptionValue, shiftNumber);
+        } else {
+            // Handle the case where one or both input fields are empty
+            resultElement.innerHTML = 'Please fill in both fields.';
+        }
     }
+    
