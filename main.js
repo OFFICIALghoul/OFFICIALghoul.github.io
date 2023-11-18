@@ -35,7 +35,7 @@
       return decryptString;
     }
 
-    function printToHTML() {
+    function printEncryption() {
         event.preventDefault();
         const encryptionValue = document.getElementById('encrypt').value;
         const number = document.getElementById('shift').value;
@@ -48,6 +48,25 @@
             
             // Call the encrypt function and update the result in the HTML
             resultElement.innerHTML = encrypt(encryptionValue, shiftNumber);
+        } else {
+            // Handle the case where one or both input fields are empty
+            resultElement.innerHTML = 'Please fill in both fields.';
+        }
+    }
+
+    function printDecryption(){
+        event.preventDefault();
+        const encryptionValue = document.getElementById('decrypt').value;
+        const number = document.getElementById('reverseNumber').value;
+        const resultElement = document.getElementById('decryptResult');
+    
+        // Check if both input fields have values
+        if (encryptionValue && number) {
+            // Convert the 'number' value to a number (it's retrieved as a string from the input)
+            const shiftNumber = parseInt(number, 10);
+            
+            // Call the encrypt function and update the result in the HTML
+            resultElement.innerHTML = decrypt(encryptionValue, shiftNumber);
         } else {
             // Handle the case where one or both input fields are empty
             resultElement.innerHTML = 'Please fill in both fields.';

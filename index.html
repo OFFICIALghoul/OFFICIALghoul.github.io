@@ -11,19 +11,36 @@
 </head>
 
 <body>
+    <h1>STILL BETA DON'T JUDGE</h1>
     <form id="encryptionForm">
         <label for="encrypt">Insert what you want to encrypt</label>
         <br>
         <input type="text" id="encrypt" name="encrypt" required>
         <br>
-        <label for="shift">Insert any number between 1-10, <strong>REMEMBER ME</strong></label>
+        <label for="shift">Insert any number, <strong>REMEMBER ME</strong></label>
         <br>
-        <input type="number" id="shift" name="shift" min="1" max="10" required>
+        <input type="number" id="shift" name="shift" required>
         <br>
     </form>
+    <br>
+    <button type="submit" form="encryptionForm" onclick="printEncryption()">encrypt now</button>
+    <br><br>
     Result:
     <p id="result" name="result"></p>
-    <button type="submit" form="encryptionForm" onclick="printToHTML()">Submit Form 1</button>
+    <form id="decryptionForm">
+        <label for="encrypt">Insert what you want to decrypt</label>
+        <br>
+        <input type="text" id="decrypt" name="decrypt" required>
+        <br>
+        <label for="reverseNumber">Insert the number </label>
+        <br>
+        <input type="number" id="reverseNumber" name="reverseNumber" required>
+        <br>
+    </form>
+    <button type="submit" form="decryptionForm" onclick="printDecryption()">encrypt now</button>
+    <br><br>
+    Result:
+    <p id="decryptResult" name="decryptResult"></p>
 </body>
 
 </html>
