@@ -10,32 +10,7 @@
 </head>
 
 <body>
-    <div class="menu">
-        <div class="leftSide">
-            <button type="button" onmouseenter="openMenu()"><strong>☰</strong></button>
-            <ul id="list">
-                <li><a href="">Encryption</a></li>
-                <li><a href="">Encryption</a></li>
-                <li><a href="">Encryption</a></li>
-                <li><a href="">Encryption</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <script>
-        function openMenu() {
-            const list = document.getElementById('list');
-            const menu = document.getElementsByClassName('menu')[0]; // Get the first element with the 'menu' class
-
-            if (list.style.display === 'none' || list.style.display === '') {
-                list.style.display = 'block';
-                menu.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-            } else {
-                list.style.display = 'none';
-                menu.style.backgroundColor = ''; // Reset to default
-            }
-        }
-    </script>
+    
 </body>
 
 </html>

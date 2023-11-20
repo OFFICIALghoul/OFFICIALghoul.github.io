@@ -27,3 +27,57 @@ label{
 p{
     font-size: 20px;
 }
+
+body{
+    margin: 0;
+    z-index: 0;
+}
+
+#list{
+    display: none;
+    color: white;
+    list-style: none;
+}
+
+.leftSide{
+    transition: all 0.5s;
+    background:white;
+    width: fit-content;
+    padding: 10px;
+}
+
+.menu{
+    width: 100%;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+button{
+    font-size: 30px;
+    border: none;
+    background: none;
+    color: white;
+}
+
+#list a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+
+a:hover{
+    padding: 0px 0px 0px 100px;
+    transition: all 0.8s;
+}
+
+#list li{
+    margin: 10px;
+}
+
+button img{
+    width: 100px;
+}

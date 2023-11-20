@@ -13,6 +13,41 @@
 </head>
 
 <body>
+    <div class="menu">
+        <div class="leftSide">
+            <button type="button" onmouseenter="openMenu()"><img src="images/logo.png"></button>
+            <ul id="list">
+                <li><a href="">Encryption</a></li>
+                <li><a href="">Encryption</a></li>
+                <li><a href="">Encryption</a></li>
+                <li><a href="">Encryption</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openMenu() {
+            const list = document.getElementById('list');
+            const menu = document.getElementsByClassName('menu')[0]; // Get the first element with the 'menu' class
+            const leftSide = document.getElementsByClassName('leftSide')[0]; // Get the first element with the 'menu' class
+
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                menu.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+                menu.style.boxShadow= '2px -0px 5px 10px rgba(0, 0, 0, 0.2)'
+                leftSide.style.padding= '10px 100px 10px 10px'
+                leftSide.style.width= '300px'
+                leftSide.style.backgroundColor= 'rgba(0, 0, 0, 0.8)'
+            } else {
+                list.style.display = 'none';
+                menu.style.backgroundColor = '';
+                menu.style.boxShadow= ''
+                leftSide.style.padding= '10px'
+                leftSide.style.width= 'fit-content'
+                leftSide.style.backgroundColor= 'white'
+            }
+        }
+    </script>
     <h1>Encryption (beta)</h1>
     <form id="encryptionForm">
         <label for="encrypt">Insert what you want to encrypt</label>
