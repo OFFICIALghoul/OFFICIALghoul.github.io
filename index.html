@@ -9,13 +9,12 @@
     <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="./main.js"></script>
 </head>
 
 <body>
     <div class="menu">
         <div class="leftSide">
-            <button class='menuBtn' type="button" onmouseenter="openMenu()"><img src="images/logo.png"></button>
+            <button class='menuBtn' type="button" id="menuBtn"><img src="images/logo.png"></button>
             <ul id="list">
                 <li><a href="encryption.html">Encryption</a></li>
                 <li><a href="">Encryption</a></li>
@@ -24,36 +23,6 @@
             </ul>
         </div>
     </div>
-    <script>
-        function openMenu() {
-            const list = document.getElementById('list');
-            const menu = document.getElementsByClassName('menu')[0]; // Get the first element with the 'menu' class
-            const leftSide = document.getElementsByClassName('leftSide')[0]; // Get the first element with the 'menu' class
-
-            if (list.style.display === 'none' || list.style.display === '') {
-                list.style.display = 'block';
-                menu.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-                menu.style.boxShadow= '2px -0px 5px 10px rgba(0, 0, 0, 0.2)'
-                leftSide.style.padding= '10px 100px 10px 10px'
-                leftSide.style.width= '300px'
-                leftSide.style.backgroundColor= 'rgba(0, 0, 0, 0.8)'
-                leftSide.style.height = '100%'
-                menu.style.height = '100%'
-            } else {
-                list.style.display = 'none';
-                menu.style.backgroundColor = '';
-                menu.style.boxShadow= ''
-                leftSide.style.padding= '10px'
-                leftSide.style.width= 'fit-content'
-                leftSide.style.backgroundColor= 'white'
-                leftSide.style.height = ''
-                menu.style.height = ''
-            }
-        }
-    </script>
-    
-    <br><br>
-
+    <script src="./main.js"></script>
 </body>
-
 </html>

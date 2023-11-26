@@ -41,14 +41,12 @@ function decrypt(encryptString, n) {
 
 function ranValues() {
     let ranValue = '';
-    let length = 5; // specify the length of the string
+    let length = 5;
 
     for (let i = 0; i < length; i++) {
-        // Generate a random ASCII code for a character in the range A-Z (65-90)
         let charNum = Math.floor(Math.random() * 26) + 65;
         ranValue += String.fromCharCode(charNum);
     }
-    console.log(ranValue)
     return ranValue;
 }
 
@@ -83,5 +81,20 @@ function printDecryption() {
     }
 }
 
+document.getElementById('menuBtn').addEventListener('mouseenter', openMenu);
 
-ranValues()
+function openMenu() {
+    const list = document.getElementById('list');
+    const menu = document.getElementsByClassName('menu')[0];
+    const leftSide = document.getElementsByClassName('leftSide')[0];
+
+    if (list.style.display === 'none' || list.style.display === '') {
+        list.style.display = 'block';
+        menu.classList.add('active');
+        leftSide.classList.add('active');
+    } else {
+        list.style.display = 'none';
+        menu.classList.remove('active');
+        leftSide.classList.remove('active');
+    }
+}
