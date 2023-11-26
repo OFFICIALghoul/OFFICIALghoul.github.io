@@ -11,7 +11,7 @@ form{
     line-height: 2.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    width: 45%;
+    width: 48%;
     float: left;
 }
 
@@ -55,7 +55,7 @@ body{
     z-index: 10;
 }
 
-button{
+.menuBtn{
     font-size: 30px;
     border: none;
     background: none;
@@ -78,6 +78,6 @@ a:hover{
     margin: 10px;
 }
 
-button img{
+img{
     width: 100px;
 }
