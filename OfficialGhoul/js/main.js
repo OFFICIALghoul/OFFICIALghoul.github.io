@@ -1,7 +1,11 @@
 
+function randomizeCasing() {
+    
+}
+
 function encrypt(plainString, n) {
     let encryptString = '';
-    const tempString = plainString.toUpperCase();
+    const tempString = plainString;
 
     for (let i = 0; i < tempString.length; i++) {
         let charNum = tempString.charCodeAt(i);
@@ -13,7 +17,7 @@ function encrypt(plainString, n) {
             }
         }
         encryptString += String.fromCharCode(charNum);
-    }   
+    }
     encryptString += ' '
     encryptString += ranValues()
     return encryptString;
@@ -81,27 +85,31 @@ function printDecryption() {
     }
 }
 
-document.getElementById('menuBtn').addEventListener('mouseenter', openMenu);
+document.querySelector('.leftSide').addEventListener('mouseover', openMenu);
+document.querySelector('.leftSide').addEventListener('mouseout', closeMenu);
+
+function closeMenu() {
+    const list = document.getElementById('list');
+    const menu = document.getElementsByClassName('menu')[0];
+    const leftSide = document.getElementsByClassName('leftSide')[0];
+    list.style.display = 'none';
+    menu.classList.remove('active');
+    leftSide.classList.remove('active');
+}
+
 
 function openMenu() {
     const list = document.getElementById('list');
     const menu = document.getElementsByClassName('menu')[0];
     const leftSide = document.getElementsByClassName('leftSide')[0];
-
-    if (list.style.display === 'none' || list.style.display === '') {
-        list.style.display = 'block';
-        menu.classList.add('active');
-        leftSide.classList.add('active');
-    } else {
-        list.style.display = 'none';
-        menu.classList.remove('active');
-        leftSide.classList.remove('active');
-    }
+    list.style.display = 'block';
+    menu.classList.add('active');
+    leftSide.classList.add('active');
 }
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const parallax = document.querySelector('.introduction');
     const scrollPosition = window.pageYOffset;
-  
+
     parallax.style.backgroundPosition = 'center ' + (-scrollPosition * 0.5) + 'px';
-  });
+});

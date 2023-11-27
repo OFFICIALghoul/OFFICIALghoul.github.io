@@ -1,11 +1,20 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf');
+}
+
 * {
     margin: 0;
 }
 
 html {
     scroll-behavior: smooth;
-    background: rgba(0, 0, 0, 0.2);
-  }
+}
+
+h1{
+    font-family: 'Montserrat';
+    color: white;
+}
 
 .introduction {
     background-image: url("../images/background.png");
@@ -22,20 +31,35 @@ html {
     background-size: cover;
 }
 
-.mainLeft{
-    width: 40%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.mainLeft {
+    flex: 1;
 }
 
-.mainRight{
-    width: 40%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.mainRight {
+    flex: 1;
 }
+
+.main {
+    display: flex;
+    font-family: 'Montserrat';
+}
+
+.mainLeft,
+.mainRight {
+    width: 50%;
+    padding: 3vh;
+}
+
+.main p{
+    font-size: 18px;
+}
+
+.main h2 {
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .main p {
+    color: #666;
+    line-height: 1.6;
+  }
