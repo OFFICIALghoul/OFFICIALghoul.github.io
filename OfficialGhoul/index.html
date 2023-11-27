@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghoul [BETA]</title>
     <link rel="icon" type="image/x-icon" href="images/favicon1.ico">
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/mainPg.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <div class="leftSide">
             <button class='menuBtn' type="button" id="menuBtn"><img src="images/logo.png"></button>
             <ul id="list">
-                <li><a href="encryption.html">Encryption</a></li>
+                <li><a href="./pages/encryption.html">Encryption</a></li>
                 <li><a href="">Encryption</a></li>
                 <li><a href="">Encryption</a></li>
                 <li><a href="">Encryption</a></li>
@@ -27,6 +28,35 @@
     <header class="introduction">
         <h1>Official Ghoul (beta)</h1>
     </header>
-    <script src="./main.js"></script>
+    <div class="main">
+        <div class="mainLeft">
+            <h2>What is Ghoul?</h2>
+            <p>Ghoul is a simple encryption/decryption tool that uses the Caesar Cipher method. It is a simple
+                substitution cipher that replaces a letter with the letter a certain number of positions down the
+                alphabet.</p>
+            <p>For example, with a shift of 1, A would be replaced by B, B would become C, and so on.</p>
+            <p>It is named after Julius Caesar, who used it in his private correspondence.</p>
+            <p>It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some
+                fixed number of positions down the alphabet.</p>
+            <p>For example, with a left shift of 3, D would be replaced by A, E would become B, and so on.</p>
+            <p>The method is named after Julius Caesar, who used it in his private correspondence.</p>
+            <p>Encryption is the process of encoding a message or information in such a way that only authorized parties
+                can access it and those who are not authorized cannot.</p>
+            <p>Decryption is the process of taking encoded or encrypted text or other data and converting it back into
+                text that you or the computer can read and understand.</p>
+        </div>
+        <div class="mainRight">
+            <h2>How to use Ghoul?</h2>
+            <p>First, you need to choose whether you want to encrypt or decrypt a message.</p>
+            <p>Then, you need to insert the message you want to encrypt/decrypt.</p>
+            <p>After that, you need to insert a number between 1-20, which will be used to encrypt/decrypt the message.
+            </p>
+            <p>Finally, you need to click the button and the result will be displayed.</p>
+            <p>For example, if you want to encrypt the message "Hello" with a shift of 3, the result will be "Khoor".
+            </p>
+            <p>And if you want to decrypt the message "Khoor" with a shift of 3, the result will be "Hello".</p>
+        </div>
+        <script src="./js/main.js"></script>
 </body>
+
 </html>

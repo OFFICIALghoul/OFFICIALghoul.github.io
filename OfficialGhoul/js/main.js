@@ -98,3 +98,10 @@ function openMenu() {
         leftSide.classList.remove('active');
     }
 }
+
+window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.introduction');
+    const scrollPosition = window.pageYOffset;
+  
+    parallax.style.backgroundPosition = 'center ' + (-scrollPosition * 0.5) + 'px';
+  });

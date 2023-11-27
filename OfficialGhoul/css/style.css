@@ -41,7 +41,6 @@ body{
 
 .leftSide{
     transition: all 0.5s;
-    background:white;
     width: fit-content;
     padding: 10px;
 }
