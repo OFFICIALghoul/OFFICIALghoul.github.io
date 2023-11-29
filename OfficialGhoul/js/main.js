@@ -118,7 +118,16 @@ function closeMenu() {
 
 window.addEventListener('scroll', function () {
     const parallax = document.querySelector('.introduction');
-    const scrollPosition = window.pageYOffset;
-
+    const scrollPosition = window.scrollY;
     parallax.style.backgroundPosition = 'center ' + (-scrollPosition * 0.5) + 'px';
+});
+
+var menu = document.querySelector('.menu');
+
+leftSide.addEventListener('mouseenter', function() {
+    document.body.classList.add('noScroll');
+});
+
+leftSide.addEventListener('mouseleave', function() {
+    document.body.classList.remove('noScroll');
 });

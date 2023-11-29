@@ -12,8 +12,7 @@ html {
 }
 
 h1{
-    font-family: 'Montserrat';
-    color: white;
+    text-align: center
 }
 
 .introduction {
@@ -24,9 +23,7 @@ h1{
     justify-content: flex-end;
     margin-left: auto;
     color: white;
-   
     background-attachment: fixed;
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
