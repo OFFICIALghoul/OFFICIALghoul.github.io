@@ -91,7 +91,6 @@ function printDecryption() {
     }
 }
 
-console.log(encrypt('Hello', 3))
 const leftSide = document.querySelector('.leftSide');
 
 leftSide.addEventListener('mouseover', openMenu);
